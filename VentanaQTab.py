@@ -12,9 +12,7 @@ class VentanaPrincipal(QMainWindow):
         self.setMinimumSize(400, 400)
         self.setWindowTitle("Ejemplo de QTabWigget")
 
-        tabbs = Tabss()
-
-        self.setCentralWidget(tabbs)
+        self.setCentralWidget(Tabss())
 
         self.show()
 
@@ -29,6 +27,7 @@ class Tabss(QTabWidget):
         self.addTab(CajaColor("orange"), "Naranja")
         self.addTab(Formulario(),"Formulario")
 
+        # self.setTabPosition(QTabWidget.TabPosition.West)
         self.setCurrentIndex(2)
 
 if __name__ == "__main__":
